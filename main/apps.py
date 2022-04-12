@@ -1,3 +1,7 @@
+import os
+
+from aiogram import Bot, Dispatcher
+from aiogram.utils import executor
 from django.apps import AppConfig
 
 

@@ -1,4 +1,5 @@
 import os
+import subprocess
 
 from celery import Celery
 from celery.schedules import crontab
@@ -31,3 +32,9 @@ app.conf.timezone = 'UTC'
 @app.task(bind=True)
 def debug_task(self):
     print(f'Request: {self.request!r}')
+
+
+@app.task(bind=True)
+def run_telegram_bot(self):
+    subprocess.Popen(['python', 'main/tel_bot.py'])
+

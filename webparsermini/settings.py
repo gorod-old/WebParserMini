@@ -9,15 +9,12 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
 import os
 
 import environ
 
 from pathlib import Path
-
 from kombu import Queue, Exchange
-
 from ProjectSetup.setup import ProjSetup
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -160,3 +157,4 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = setup.EMAIL_HOST_USER
 EMAIL_HOST_PASSWORD = setup.EMAIL_HOST_PASSWORD
+
